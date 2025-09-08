@@ -13,7 +13,7 @@ export function Event({name}: Props) {
         <View style = {styles.container}>
             <AntDesign style = {styles.icon} name="checkcircle" size={24} color="green" marginleft="10" />
             <Text style = {styles.text}>{name}</Text>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity >
            
             </TouchableOpacity>
         </View>

@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
       alignItems:"center",
       justifyContent:"center",
       marginTop:30,
-      marginLeft: 5
+      marginRight: 5
 ,    },
     form:{
       width:"100%",
