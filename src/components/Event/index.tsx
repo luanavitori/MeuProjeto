@@ -8,6 +8,9 @@ type Props = {
     onClick?: ()=>void
 }
 
+
+  
+
 export function Event({name}: Props) {
     return(
         <View style = {styles.container}>

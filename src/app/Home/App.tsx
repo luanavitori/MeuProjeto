@@ -1,27 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { Alert, Button, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView} from 'react-native';
-import { styles } from './styles';
-import { Event } from "../../components/Event";
-import Ionicons from '@expo/vector-icons/Ionicons';
+import React from "react";
+import { Text, View, FlatList, TextInput, TouchableOpacity } from "react-native";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
+import { styles } from "./styles";
+
+interface Item {
+  id: string;
+  nome: string;
+}
 
 export default function App() {
+  
+  const lista: Item[] = [
+    { id: "1", nome: "Maçã" },
+    { id: "2", nome: "Banana" },
+    { id: "3", nome: "Melancia" },
+    { id: "4", nome: "Limão" },
+    { id: "5", nome: "Pera" },
+  ];
+
+  const renderItem = ({ item, index }: { item: Item; index: number }) => (
+    <View
+      style={[
+        styles.item,
+        index === lista.length - 1 && { borderBottomWidth: 0 }, // tira borda do último
+      ]}
+    >
+      <AntDesign name="checkcircle" size={20} color="black" />
+      <Text style={styles.texto}>{item.nome}</Text>
+    </View>
+  );
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Lista de Compras</Text>
-      <View style={styles.form}>
+      <Text style={styles.titulo}>Lista de Compras</Text>
       <TextInput style={styles.input} placeholder="Digite o produto" placeholderTextColor={'#fff'} ></TextInput>
-      <TouchableOpacity style={styles.button} onPress={()=>{Alert.alert("Teste Botão")}}>
-        <Text style={styles.buttonText}><Ionicons name="add-circle-outline" size={24} color="black" /></Text>
-      </TouchableOpacity>
-      {/* <StatusBar style="auto" /> */}
-      </View>
-      <ScrollView>
-      <Event name = "Maça"/>
-      <Event name = "Banana"/>
-      <Event name = "Melancia"/>
-      </ScrollView>
-      
+
+      {/* <TouchableOpacity style={styles.button}>
+        <Ionicons name="add-circle-outline" size={24} color="black" />
+    </TouchableOpacity> */}
+      <FlatList
+        data={lista}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        style={styles.listaContainer}
+      />
     </View>
-   
   );
 }
