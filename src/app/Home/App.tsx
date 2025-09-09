@@ -31,13 +31,16 @@ export default function App() {
   );
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>Lista de Compras</Text>
-      <TextInput style={styles.input} placeholder="Digite o produto" placeholderTextColor={'#fff'} ></TextInput>
-
-      {/* <TouchableOpacity style={styles.button}>
+    <View style={styles.inputContainer}>
+      <TextInput
+        style={styles.input}
+        placeholder="Digite o produto"
+        placeholderTextColor="#fff"
+      />
+      <TouchableOpacity style={styles.button}>
         <Ionicons name="add-circle-outline" size={24} color="black" />
-    </TouchableOpacity> */}
+      </TouchableOpacity>
+
       <FlatList
         data={lista}
         renderItem={renderItem}

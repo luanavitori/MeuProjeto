@@ -1,7 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  
+  inputContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 20,
+  },
+
   container: {
     flex: 1,
     backgroundColor: '#1E90FF',
@@ -18,12 +23,11 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-
-  input: { 
+  input: {
     backgroundColor: "#104E8B",
-    borderRadius: 20,
-    height: 40,          
-    width: "70%",        
+    height: 40,
+    width: 220,          // largura fixa, menor e compacta
+    borderRadius: 10,
     paddingHorizontal: 12,
     borderWidth: 1,
     borderColor: "#1E90FF",
@@ -41,13 +45,14 @@ export const styles = StyleSheet.create({
   },
 
   
-  button:{
+  button: {
     backgroundColor: "#32CD32",
-    width: 50,      
-    height: 40,     
+    width: 40,           // largura menor, proporcional
+    height: 40,          // mesma altura do input
     borderRadius: 8,
-    alignItems:"center",
-    justifyContent:"center",
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: 10,      // espaço entre input e botão
   },
 
   buttonText:{
