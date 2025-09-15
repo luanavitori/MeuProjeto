@@ -15,14 +15,14 @@ export const styles = StyleSheet.create({
         fontSize: 24,
         color: "#fff"
     },
-    // //button:{
-    //     width:56,
-    //     height:56,
-    //     alignItems: "center",
-    //     justifyContent:"center",
-    //     backgroundColor:"#FF0000",
-    //     borderRadius:8
-    // },
+    button:{
+        width:56,
+        height:56,
+        alignItems: "center",
+        justifyContent:"center",
+        backgroundColor:"#FF0000",
+        borderRadius:8
+    },
     text:{
         color:"#fff",
         flex: 1
@@ -31,4 +31,5 @@ export const styles = StyleSheet.create({
     icon: {
         marginLeft:2
     }
-})
+
+});
