@@ -1,24 +1,57 @@
 import React, { useState } from "react";
-import { View, Text } from "react-native";
-import InputProduct from "../Components/Input/input.js";
-import ShoppingList from "../Components/Lista/listadeCompras.js";
+import { View, Text, ScrollView, StyleSheet, TextInput } from "react-native";
+import Input from "../Components/Input/input.js";
+// import ShoppingList from "../Components/Lista/listadeCompras.js";
+import { Itens } from "../Components/Itens/index.js";
 import styles from "./styles";
 
 export default function App() {
-  const [items, setItems] = useState<string[]>(["Maçã", "Banana", "Melancia"]);
+  const [list, setList] = useState<string[]>([])
+  const [listName, setListName] = useState('')
 
-  const addItem = (item: string) => {
-    setItems((prev) => [...prev, item]);
-  };
 
+  function handleAdd() {
+    setList(prevState => [...prevState, listName])
+    setListName('')
+    
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Lista de Compras</Text>
-      <InputProduct onAdd={addItem} />
-      <ShoppingList items={items} />
-    </View>
-  );
+      <Input placeH='Digite o produto' onChangeText={e => setListName(e)}
+      onPress={handleAdd}
+      value={listName} />
+      <View style={styles.area}>
+        <ScrollView>
+          {
+            list.map(item=>(
+              <Itens
+              kev={item}
+              name={item}
+              />
+            
+            ))
+          }
+        </ScrollView>
+        </View>
+      </View>
+      );
 }
+// export default function App() {
+//   const [items, setItems] = useState<string[]>(["Maçã", "Banana", "Melancia"]);
+
+//   const addItem = (item: string) => {
+//     setItems((prev) => [...prev, item]);
+//   };
+
+//   return (
+//     <View style={styles.container}>
+//       <Text style={styles.title}>Lista de Compras</Text>
+//       <InputProduct onAdd={addItem} />
+//       <ShoppingList items={items} />
+//     </View>
+//   );
+// }
 
 
 
