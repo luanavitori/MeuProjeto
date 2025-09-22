@@ -13,6 +13,11 @@ export default StyleSheet.create({
     paddingHorizontal: 10,
     height: 50
   },
+  buttonText:{
+    fontWeight:600,
+    fontSize:20,
+    color:"white"
+  },
   button: {
     backgroundColor: "black",
     marginLeft: 5,
