@@ -1,23 +1,16 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { View, Text, Button } from "react-native";
 import styles from "./styles";
 
-export default function ShoppingList({ items }) {
+export default function ShoppingList({ items, onRemove }) {
   return (
-    <View style={styles.container}>
-      <ScrollView>
-        {items.map((item, index) => (
-          <React.Fragment key={index}>
-            <View style={styles.item}>
-              <Ionicons name="checkmark-circle" size={22} color="black" />
-              <Text style={styles.text}>{item}</Text>
-            </View>
-            
-            {index < items.length - 1 && <View style={styles.separator} />}
-          </React.Fragment>
-        ))}
-      </ScrollView>
+    <View style={styles.listContainer}>
+      {items.map((item, index) => (
+        <View key={index} style={styles.item}>
+          <Text style={styles.itemText}>{item}</Text>
+          <Button title="Excluir" onPress={() => onRemove(index)} />
+        </View>
+      ))}
     </View>
   );
 }

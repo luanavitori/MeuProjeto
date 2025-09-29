@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         marginTop:10,
         marginRight:10,
         borderBottomWidth: 1,
-        borderBottomColor:"#000",
+        borderBottomColor:"#0000FF",
     },
 
     text:{

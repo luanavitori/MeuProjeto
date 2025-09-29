@@ -1,28 +1,27 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  container: {
-    margin: 10,
-    borderWidth: 1,
-    borderColor: "black",
-    borderRadius: 15,
-    paddingVertical: 8,
-    height: 722,
+  listContainer: {
+    width: "100%",
+    marginTop: 10,
   },
   item: {
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 10,
-    paddingVertical: 12,
+    padding: 15,
+    marginVertical: 6,
+    borderRadius: 12,
+    backgroundColor: "#0000FF",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+    elevation: 3,
   },
-  text: {
-    marginLeft: 10,
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  separator: {
-    height: 1,
-    backgroundColor: "#000",
-    marginHorizontal: 10,
+  itemText: {
+    fontSize: 18,
+    color: "#240046",
+    fontWeight: "500",
   },
 });
