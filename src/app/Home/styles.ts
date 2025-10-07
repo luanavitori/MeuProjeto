@@ -1,68 +1,111 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1874CD',
+    backgroundColor: "#1874CD",
     padding: 20,
   },
-  text: {
+  title: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#fff',
-    marginBottom: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "#fff",
+    marginVertical: 20,
     marginTop: 35,
-    textAlign: 'center',
-  },
-  Conteudo: {
-    flex: 1,
-    backgroundColor: '#1E90FF',
-    borderRadius: 10,
-    padding: 15,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  form: {
-    marginBottom: 20,
   },
   input: {
     height: 50,
-    borderColor: '#0000CD',
+    borderColor: "#0000CD",
     borderWidth: 3,
     borderRadius: 5,
     paddingHorizontal: 10,
     marginBottom: 10,
-    backgroundColor: '#fff',
-    
+    backgroundColor: "#fff",
   },
   button: {
-    backgroundColor: '#007BFF',
+    backgroundColor: "#007BFF",
     borderRadius: 5,
-    padding: 10,
-    alignItems: 'center',
-  },
-  borda: {
-    marginTop: 10,
-    padding: 10,
-    borderWidth: 3,
-    borderColor: '#',
-    borderRadius: 5,
-    backgroundColor: '#007BFF',
+    padding: 12,
+    alignItems: "center",
+    marginBottom: 15,
+    elevation: 4,
   },
   buttonText: {
+    color: "#fff",
+    fontWeight: "bold",
     fontSize: 16,
-    color: '#fff',
-    textAlign: 'center',
+    textAlign: "center",
   },
-  
+  card: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "#fff",
+    paddingVertical: 12,
+    paddingHorizontal: 10,
+    marginBottom: 8,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  infoContainer: {
+    flex: 2,
+  },
+  nome: {
+    fontWeight: "bold",
+    fontSize: 16,
+    color: "#black",
+  },
+  produtor: {
+    color: "#black",
+    fontSize: 13,
+  },
+  quantidadeContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
+  },
+  quantidade: {
+    marginHorizontal: 8,
+    fontWeight: "bold",
+    color: "#black",
+  },
+  precoContainer: {
+    flex: 1,
+    alignItems: "flex-end",
+  },
+  preco: {
+    fontWeight: "bold",
+    color: "#32CD32",
+  },
+  resumo: {
+    borderTopWidth: 2,
+    borderTopColor: "#fff",
+    marginTop: 15,
+    paddingTop: 10,
+  },
+  linhaResumo: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginVertical: 5,
+  },
+  textoResumo: {
+    color: "#E0FFFF",
+  },
+  totalLabel: {
+    fontWeight: "bold",
+    color: "#fff",
+  },
+  totalValor: {
+    fontWeight: "bold",
+    color: "#32CD32",
+  },
 });
-
 
 
 
